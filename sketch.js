@@ -1,9 +1,3 @@
-// const playerName = prompt("p for pause\nc for continue\nEnter your name");
-
-// if(playerName) {
-//     console.log(playerName);
-// }
-
 let bird;
 let pipes = [];
 let score = 0;
@@ -53,7 +47,6 @@ function draw() {
     pipe.update();
 
     if (pipe.hits(bird)) {
-      // console.log("hit");
       if (pipe.alive) {
         lives--;
         lifeboard.innerHTML = lives;
@@ -66,7 +59,6 @@ function draw() {
     if (!pipes[0].hit) {
       score++;
       scoreBoard.innerHTML = score;
-      // console.log(score);
     }
     pipes.shift();
   }
@@ -96,7 +88,6 @@ function draw() {
   if (vol < thresholdBottom) {
     clapping = false;
   }
-  // console.log(vol);
 }
 
 function keyPressed() {
